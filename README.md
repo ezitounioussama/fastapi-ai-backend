@@ -11,11 +11,11 @@ every response exactly reproducible, which is what lets the tests assert real va
 "something came back".
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 
-python main.py     # http://127.0.0.1:8000/docs
-pytest -q          # 55 passed
+uv run python main.py     # http://127.0.0.1:8000/docs
+uv run pytest -q          # 55 passed
 ```
 
 ## Also in this repo
